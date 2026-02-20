@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+
+# Ignore node_modules directory
+node_modules/
+dist/
+.next/
+*.log
+
+# Ignore large files
+frontend/node_modules/@next/swc-win32-x64-msvc/next-swc.win32-x64-msvc.node

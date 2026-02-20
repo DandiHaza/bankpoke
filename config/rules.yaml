@@ -1,0 +1,128 @@
+{
+  "rules": [
+    {
+      "name": "transfer_internal",
+      "priority": 100,
+      "pattern": "계좌이체|내부이체|내\\s*계좌|자체\\s*이체|송금",
+      "expense_kind": "transfer",
+      "confidence": 0.99
+    },
+    {
+      "name": "repayment_card_or_loan",
+      "priority": 95,
+      "pattern": "카드대금|카드\\s*값|대출\\s*상환|원리금|할부\\s*금",
+      "expense_kind": "repayment",
+      "confidence": 0.99
+    },
+    {
+      "name": "saving_or_invest",
+      "priority": 92,
+      "pattern": "적금|예금|펀드|투자|주식|\\betf\\b|irp|연금",
+      "expense_kind": "saving_invest",
+      "confidence": 0.97
+    },
+    {
+      "name": "refund_or_cancel",
+      "priority": 90,
+      "pattern": "환불|취소|차지백|리턴",
+      "direction": "income",
+      "expense_kind": "refund",
+      "confidence": 0.98
+    },
+    {
+      "name": "cash_withdrawal",
+      "priority": 88,
+      "pattern": "현금\\s*인출|atm\\s*출금|출금",
+      "expense_kind": "cash_withdrawal",
+      "confidence": 0.96
+    },
+    {
+      "name": "category_cafe",
+      "priority": 60,
+      "pattern": "스타벅스|투썸|이디야|카페|커피",
+      "expense_kind": "real",
+      "category": "cafe",
+      "confidence": 0.9
+    },
+    {
+      "name": "category_food",
+      "priority": 58,
+      "pattern": "식비|배달|치킨|점심|저녁|식당|버거|피자",
+      "expense_kind": "real",
+      "category": "food",
+      "confidence": 0.88
+    },
+    {
+      "name": "category_transport",
+      "priority": 56,
+      "pattern": "버스|지하철|택시|주유|교통|톨게이트",
+      "expense_kind": "real",
+      "category": "transport",
+      "confidence": 0.88
+    },
+    {
+      "name": "category_shopping",
+      "priority": 54,
+      "pattern": "쿠팡|네이버쇼핑|쇼핑|마켓|올리브영|다이소",
+      "expense_kind": "real",
+      "category": "shopping",
+      "confidence": 0.86
+    },
+    {
+      "name": "category_living",
+      "priority": 52,
+      "pattern": "관리비|전기|수도|가스|통신|휴지|생필품",
+      "expense_kind": "real",
+      "category": "living",
+      "confidence": 0.86
+    },
+    {
+      "name": "category_subscription",
+      "priority": 50,
+      "pattern": "넷플릭스|유튜브\\s*프리미엄|spotify|정기결제|구독",
+      "expense_kind": "real",
+      "category": "subscription",
+      "confidence": 0.89
+    },
+    {
+      "name": "category_medical",
+      "priority": 48,
+      "pattern": "병원|약국|진료|치과",
+      "expense_kind": "real",
+      "category": "medical",
+      "confidence": 0.89
+    },
+    {
+      "name": "category_education",
+      "priority": 46,
+      "pattern": "학원|강의|수강|교재|교육",
+      "expense_kind": "real",
+      "category": "education",
+      "confidence": 0.84
+    },
+    {
+      "name": "category_leisure",
+      "priority": 44,
+      "pattern": "영화|공연|게임|헬스|취미",
+      "expense_kind": "real",
+      "category": "leisure",
+      "confidence": 0.83
+    },
+    {
+      "name": "category_gift",
+      "priority": 42,
+      "pattern": "선물|경조사|축의|조의",
+      "expense_kind": "real",
+      "category": "gift",
+      "confidence": 0.84
+    },
+    {
+      "name": "category_travel",
+      "priority": 40,
+      "pattern": "항공|숙소|호텔|여행|기차",
+      "expense_kind": "real",
+      "category": "travel",
+      "confidence": 0.85
+    }
+  ]
+}
